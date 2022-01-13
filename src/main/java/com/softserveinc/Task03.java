@@ -22,7 +22,22 @@ import java.util.Scanner;
 public class Task03 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        // TODO: Write your code here
-
+        int minNumber = 0;
+        while (minNumber == 0) {
+//            System.out.println("Enter the number after symbol >>>. To exit enter a zero.");
+            System.out.print(">>> ");
+            minNumber = scanner.nextInt();
+        }
+        int number;
+        while (minNumber != 0) {
+            System.out.print(">>> ");
+            number = scanner.nextInt();
+            if (number < minNumber && number != 0) {
+                minNumber = number;
+            } else if (number == 0) {
+                break;
+            }
+        }
+        System.out.println("Minimum number is " + minNumber);
     }
 }

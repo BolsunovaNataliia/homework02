@@ -32,7 +32,30 @@ import java.util.Scanner;
 public class Task02 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        // TODO: Write your code here
-
+        System.out.print("t1 >>> ");
+        double t1 = scanner.nextDouble();
+        System.out.print("t2 >>> ");
+        double t2 = scanner.nextDouble();
+        System.out.print("dt >>> ");
+        double dt = scanner.nextDouble();
+        for (int i = 0; i < 17; i++) {
+            System.out.print("-");
+        }
+        System.out.print("\nC       F\n");
+        for (int i = 0; i < 17; i++) {
+            System.out.print("-");
+        }
+        System.out.println();
+        for (double j = t1; j <= t2; j=j+dt) {
+            double tC = j;
+            double tF = j*9/5 + 32;
+            System.out.printf(Locale.ENGLISH, "%.2f", tC);
+            System.out.print("    ");
+            System.out.printf(Locale.ENGLISH, "%.2f",tF);
+            System.out.println();
+        }
+        for (int k = 0; k < 17; k++) {
+            System.out.print("-");
+        }
     }
 }
